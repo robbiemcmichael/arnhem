@@ -1,0 +1,16 @@
+[package]
+name = "arnhem"
+description = "A modal compositor for Wayland"
+version = "0.1.0"
+authors = ["Robbie McMichael", "Carlos Andres D'Agostino <m@cdagostino.io>"]
+keywords = ["Wayland", "compositor", "window", "manager", "wlroots", "modal"]
+repository = "https://github.com/robbiemcmichael/arnhem"
+readme = "README.md"
+license = "MIT"
+
+[dependencies]
+wlroots = { git = "https://github.com/swaywm/wlroots-rs" }
+
+[build-dependencies]
+gcc = "0.3.*"
+pkg-config = "0.3.*"
