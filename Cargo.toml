@@ -8,9 +8,19 @@ repository = "https://github.com/robbiemcmichael/arnhem"
 readme = "README.md"
 license = "MIT"
 
-[dependencies]
-wlroots = { git = "https://github.com/swaywm/wlroots-rs" }
+[dependencies.wlroots]
+git = "https://github.com/swaywm/wlroots-rs"
+rev = "e22bef72ccbdf22f0ede4955a47d3923d4b1875b"
+default-features = false
 
 [build-dependencies]
 gcc = "0.3.*"
 pkg-config = "0.3.*"
+
+[features]
+default = ["libcap", "systemd", "elogind", "unstable-features"]
+static = ["wlroots/static"]
+libcap = ["wlroots/libcap"]
+systemd = ["wlroots/systemd"]
+elogind = ["wlroots/elogind"]
+unstable-features = ["wlroots/unstable-features"]
